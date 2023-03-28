@@ -1,0 +1,22 @@
+CREATE TABLE filmes (nome varchar(100), genero varchar(100), ano integer);
+
+INSERT INTO filmes VALUES('Run', 'Suspense', 2016);
+INSERT INTO filmes VALUES('Batman', 'Ficção', 2012);
+INSERT INTO filmes VALUES('Charada', 'Ação', 2022);
+
+-------------------------------------------------------------------------------
+
+CREATE TABLE cinemas(sala varchar(100), assentos integer, horario real, filme varchar(100));
+
+INSERT INTO cinemas VALUES('A136', 25, 4.20, 'Run');
+INSERT INTO cinemas VALUES('A137', 22, 3, 'Batman');
+INSERT INTO cinemas VALUES('A138', 21, 18, 'Charada');
+
+
+---------------------------------------------------------------------------------
+
+CREATE TABLE musicas (nome varchar(100), artista varchar(100), tipo varchar(100), tempo real);
+
+INSERT INTO musicas VALUES('Fear of the dark', 'Iron Maiden', 'Rock', 7.20);
+INSERT INTO musicas VALUES('Mágico de oz', 'Racionais', 'Rap', 6.15);
+INSERT INTO musicas VALUES('Black', 'Black Sabbath', 'Metal', 4.20);
