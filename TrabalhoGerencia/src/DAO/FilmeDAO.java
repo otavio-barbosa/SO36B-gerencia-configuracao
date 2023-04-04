@@ -73,7 +73,7 @@ public class FilmeDAO extends BdConnection {
             stat.setString(1, nome);
             stat.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Arquivo deletado com sucesso!!!");
+            JOptionPane.showMessageDialog(null, "Filme deletado com sucesso!!!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
