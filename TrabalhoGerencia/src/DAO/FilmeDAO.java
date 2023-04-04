@@ -58,7 +58,7 @@ public class FilmeDAO extends BdConnection {
            stat.setInt(3, ano);
            stat.executeUpdate();    
            
-           JOptionPane.showMessageDialog(null, "Arquivo cadastrado com sucesso!!!");
+           JOptionPane.showMessageDialog(null, "Filme cadastrado com sucesso!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
