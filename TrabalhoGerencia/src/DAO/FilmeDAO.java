@@ -44,7 +44,7 @@ public class FilmeDAO extends BdConnection {
            }
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
-            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
+            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!\nOBS: Vá em Arquivo -> Abrir.");
         }
     }
     
@@ -61,7 +61,7 @@ public class FilmeDAO extends BdConnection {
            JOptionPane.showMessageDialog(null, "Filme cadastrado com sucesso!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
-            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
+            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!\nOBS: Vá em Arquivo -> Abrir.");
         }
     }
     
@@ -73,7 +73,7 @@ public class FilmeDAO extends BdConnection {
             stat.setString(1, nome);
             stat.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Filme deletado com sucesso!!!");
+            JOptionPane.showMessageDialog(null, "Filme deletado com sucesso!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
@@ -91,10 +91,10 @@ public class FilmeDAO extends BdConnection {
             stat.setString(4, sel);
             stat.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Arquivo atualizado com sucesso!!!");
+            JOptionPane.showMessageDialog(null, "Arquivo atualizado com sucesso!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
-            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
+            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!\nOBS: Vá em Arquivo -> Abrir.");
         }
     }
     
@@ -120,7 +120,7 @@ public class FilmeDAO extends BdConnection {
 
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
-            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
+            JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!\nOBS: Vá em Arquivo -> Abrir.");
         }
     }
 }
