@@ -35,17 +35,16 @@ public class BdConnection {
                 System.out.println("Driver: " + dbmt.getDriverName());
                 System.out.println("Versao Driver: " + dbmt.getDriverVersion());
                 System.out.println("Usuario: " + dbmt.getUserName());
+                return true;
             } catch (ClassNotFoundException erro) {
                 System.out.println("Falha ao carregar o driver JDBC." + erro);
-                return false;
             } catch (IOException erro) {
                 System.out.println("Falha ao carregar o arquivo de configuração." + erro);
-                return false;
             } catch (SQLException erro) {
                 System.out.println("Falha na conexao, comando sql = " + erro);
                 JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
-                return false;
+            } finally {
+              return false;
             }
-            return true;
         }
 }
