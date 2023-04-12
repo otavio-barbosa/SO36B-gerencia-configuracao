@@ -91,7 +91,7 @@ public class FilmeDAO extends BdConnection {
             stat.setString(4, sel);
             stat.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Arquivo atualizado com sucesso!!!");
+            JOptionPane.showMessageDialog(null, "Filme atualizado com sucesso!!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
