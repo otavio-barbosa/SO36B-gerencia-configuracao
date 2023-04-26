@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author otavi
+ * @author Otávio Barbosa, Davi Antonio, Vinicius Mourão, Gabriel Barbosa
  */
 public class BdConnection {
 

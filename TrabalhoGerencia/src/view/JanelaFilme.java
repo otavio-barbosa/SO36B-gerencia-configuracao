@@ -13,7 +13,7 @@ import model.Filme;
 
 /**
  *
- * @author Otávio Barbosa
+ * @author Otávio Barbosa, Davi Antonio, Vinicius Mourão, Gabriel Barbosa
  */
 public class JanelaFilme extends javax.swing.JFrame {
     
@@ -102,7 +102,7 @@ public class JanelaFilme extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tabela);
 
         tituloCadastro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        tituloCadastro.setText("CADASTRAR FILMES");
+        tituloCadastro.setText("JAVA FILMES");
 
         jLabel2.setText("Nome");
 

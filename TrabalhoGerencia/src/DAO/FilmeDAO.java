@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import model.Filme;
 /**
  *
- * @author otavi
+ * @author Otávio Barbosa, Davi Antonio, Vinicius Mourão, Gabriel Barbosa
  */
 public class FilmeDAO extends BdConnection {
     
