@@ -25,18 +25,13 @@ public class FilmeDAO extends BdConnection {
     private PreparedStatement stat = null;
     private ResultSet rs = null;
         
-    public void ler() {
-        
-        arrayfilme = new ArrayList();
-        
+    public void ler() {        
+        arrayfilme = new ArrayList();        
         try {
            stat =  connection.prepareStatement("SELECT * FROM filmes");
-           rs = stat.executeQuery();
-           
+           rs = stat.executeQuery();           
            while(rs.next()) {
-               
-               f = new Filme();
-               
+               f = new Filme();   
                f.setNome(rs.getString("nome"));
                f.setGenero(rs.getString("genero"));
                f.setAno(rs.getInt("ano"));
@@ -52,12 +47,10 @@ public class FilmeDAO extends BdConnection {
         try {
            connection = JDBCUtil.getConnection();
            stat =  connection.prepareStatement("INSERT INTO filmes (nome,genero,ano)VALUES(?,?,?)");
-           
            stat.setString(1, nome); //começa no 1
            stat.setString(2, gene);
            stat.setInt(3, ano);
            stat.executeUpdate();    
-           
            JOptionPane.showMessageDialog(null, "Filme cadastrado com sucesso!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
@@ -69,10 +62,8 @@ public class FilmeDAO extends BdConnection {
         try {
             connection = JDBCUtil.getConnection();
             stat = connection.prepareStatement("DELETE FROM filmes WHERE nome = ?");
-            
             stat.setString(1, nome);
             stat.executeUpdate();
-            
             JOptionPane.showMessageDialog(null, "Filme deletado com sucesso!!!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
@@ -84,40 +75,32 @@ public class FilmeDAO extends BdConnection {
         try {
             connection = JDBCUtil.getConnection();
             stat = connection.prepareStatement("UPDATE filmes SET nome = ?, genero = ?, ano = ? WHERE nome = ?;");
-            
             stat.setString(1, nome);
             stat.setString(2, genero);
             stat.setInt(3, ano);
             stat.setString(4, sel);
             stat.executeUpdate();
-            
             JOptionPane.showMessageDialog(null, "Arquivo atualizado com sucesso!!!");
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
         }
     }
-    
+
     public void buscar(String nome) {
         try {
             connection = JDBCUtil.getConnection();
-            
             stat = connection.prepareStatement("SELECT * FROM filmes WHERE LOWER(nome) = LOWER(?);");
             stat.setString(1, nome);
             rs = stat.executeQuery();
-           
            while(rs.next()) {
-               
                f = new Filme();
-               
                f.setNome(rs.getString("nome"));
                f.setGenero(rs.getString("genero"));
                f.setAno(rs.getInt("ano"));
                arrayfilme.add(f);
            }
-           
            JOptionPane.showMessageDialog(null, "Nome: " + f.getNome() + "\nGenêro: " + f.getGenero() + "\nAno: " + f.getAno());
-
         } catch (SQLException erro) {
             System.out.println("Falha na conexao, comando sql = " + erro);
             JOptionPane.showMessageDialog(null, "Abra a conexão primeiro!!!\nOBS: Vá em Arquivo -> Abrir.");
