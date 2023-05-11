@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Otávio Barbosa
+ * @author Otávio Barbosa, Davi Antonio, Vinicius Mourão, Gabriel Barbosa
  */
 public class Filme implements Serializable {
     private static long serialVersionUID = 1L;
