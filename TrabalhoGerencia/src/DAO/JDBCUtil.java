@@ -15,7 +15,7 @@ import java.util.Properties;
 
 /**
  *
- * @author otavi
+ * @author Otávio Barbosa, Davi Antonio, Vinicius Mourão, Gabriel Barbosa
  */
 public class JDBCUtil {
     
