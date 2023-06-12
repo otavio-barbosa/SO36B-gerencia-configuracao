@@ -8,6 +8,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -53,3 +62,4 @@ jobs:
           asset_path: TrabalhoGerencia/target/movies-app-1.0-SNAPSHOT.jar
           asset_name: movies-app-1.0-SNAPSHOT.jar
           asset_content_type: application/java-archive
+          
