@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jar
-          path: TrabalhoGerencia/target/TrabalhoGerencia-1.0-SNAPSHOT.jar
+          path: TrabalhoGerencia/target/movies-app-1.0-SNAPSHOT.jar
