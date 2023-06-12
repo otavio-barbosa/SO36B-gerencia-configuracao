@@ -24,4 +24,4 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
-        run: cd TrabalhoGerencia && mvn clean install && mvn package && java -jar target/movies-app-1.0-SNAPSHOT.jar && scrot -d 5
+        run: cd TrabalhoGerencia && mvn clean package && mvn clean install && mvn package && java -jar target/movies-app-1.0-SNAPSHOT.jar && scrot -d 5
